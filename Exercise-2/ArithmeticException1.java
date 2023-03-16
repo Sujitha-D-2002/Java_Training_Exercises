@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ArithmeticException_1 {
+public class ArithmeticException1 {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);

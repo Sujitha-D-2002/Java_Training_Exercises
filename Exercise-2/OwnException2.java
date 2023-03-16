@@ -23,7 +23,7 @@ class OwnExceptionClass{
 		}
 	}
 }
-public class OwnException_2 {
+public class OwnException2 {
 	public static void main(String[] args) throws MarkValidationException {
 		// TODO Auto-generated method stub
 		String str=null;

@@ -5,7 +5,7 @@ class MarkValidateException extends Exception{
         super(s);
     }
 }
-public class AverageMark_2 {
+public class AverageMark2 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 			int sum=0;

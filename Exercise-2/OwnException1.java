@@ -6,7 +6,7 @@ class MarkValidateException extends Exception {
 	}
 }
 
-public class OwnException_1 {
+public class OwnException1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
