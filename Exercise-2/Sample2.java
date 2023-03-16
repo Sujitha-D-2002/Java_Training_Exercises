@@ -1,5 +1,5 @@
 
-public class Sample_2 {
+public class Sample2 {
 	public void mth1() {
 		mth2();
 		System.out.println("Caller");
