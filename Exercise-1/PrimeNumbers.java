@@ -9,11 +9,12 @@ public class PrimeNumbers {
 		int flag=0;
 		System.out.println("Prime Numbers are");
 		for(int j=2;j<n;j++) {
+			//Flag:
 			flag=0;
 			for(int i=2;i<=j/2;i++) {
 				if(j%i==0) {
+				 //break Flag;
 					flag=1;
-					break;
 				}
 			}
 			if(flag==0) {

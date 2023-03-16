@@ -5,38 +5,40 @@ class Student{
 	int rollno;	 
 }
 class Exam extends Student{
-	int mark_1,mark_2,mark_3;
+	int mark1,mark2,mark3;
 	
 }
 class Result extends Exam{
 	int totalmark;
-	public void calculateTotalMark() {
-		totalmark=mark_1+mark_2+mark_3;
+	public void calculateResult() {
+		totalmark=mark1+mark2+mark3;
 		System.out.println("Total Mark => "+name+" "+totalmark);
 	}
 	
 }
+
 public class Stud {
 
 	public static void main(String[] args) {
-		Result s1=new Result();
-		Scanner sc=new Scanner(System.in);
+		Result s1 = new Result();
+		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the name");
-		String name=sc.next();
-		s1.name=name;
+		s1.name = sc.nextLine();
+		
 		System.out.println("Enter the Roll no");
-		int rollno=sc.nextInt();
-		s1.rollno=rollno;
+		s1.rollno = sc.nextInt();
+		
 		System.out.println("Enter the mark of sub 1");
-		int m1=sc.nextInt();
-		s1.mark_1=m1;
+		s1.mark1 = sc.nextInt();
+		
 		System.out.println("Enter the mark of sub 2");
-		int m2=sc.nextInt();
-		s1.mark_2=m2;
+		s1.mark2 = sc.nextInt();
+		
 		System.out.println("Enter the mark of sub 3");
-		int m3=sc.nextInt();
-		s1.mark_3=m3;
-		s1.calculateTotalMark();
+		s1.mark3 = sc.nextInt();
+		
+		s1.calculateResult();
 		sc.close();
 	}
 

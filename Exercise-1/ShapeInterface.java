@@ -5,6 +5,8 @@ interface CalcArea{
 	public double area();
 	public double perimeter();
 }
+
+
 interface CalcVolume{
 	public double surfaceArea();
 	public double volume();
@@ -68,13 +70,11 @@ class Cuboid implements CalcArea,CalcVolume{
 	}
 	@Override
 	public double surfaceArea() {
-		// TODO Auto-generated method stub
 		return 4*pi*r*r;
 	}
 
 	@Override
 	public double volume() {
-		// TODO Auto-generated method stub
 		return (4/3)*pi*r*r*r;
 	}
 	public double area() {
@@ -135,13 +135,14 @@ public class ShapeInterface {
 		System.out.println("Area of Circle "+circle.area());
 		System.out.println("Perimeter of Circle "+circle.perimeter());
 		
-		Traingle t=new Traingle(a,b,c);
-		System.out.println("Area of Traingle "+t.area());
-		System.out.println("Perimeter of Traingle "+t.perimeter());
+		Traingle traingle=new Traingle(a,b,c);
+		System.out.println("Area of Traingle "+traingle.area());
+		System.out.println("Perimeter of Traingle "+traingle.perimeter());
 		
-		Square s=new Square(size);
-		System.out.println("Area of Square "+s.area());
-		System.out.println("Perimeter of Square "+s.perimeter());
+		Square square=new Square(size);
+		System.out.println("Area of Square "+square.area());
+		System.out.println("Perimeter of Square "+square.perimeter());
+		
 		//CalcVolume Interface
 		Cuboid cube=new Cuboid(radius);
 		System.out.println("Surface Area of Cuboid "+cube.surfaceArea());

@@ -12,15 +12,15 @@ public class proof {
 	}
 }
 class Demo{
-	int size=10;
+	Integer size=10;
 }
 
 class Passing{
-	public void passValue(int size) {//pass by value (it will not change value in address)
+	public void passValue(int size) {
 		size=20;
 		System.out.println("Within the local scope: "+size);
 	}
-	public void passReference(Demo Demo) {//pass by reference (it will change value in address)
-		Demo.size=30;
+	public void passReference(Demo demo) {
+		demo.size=30;
 	}
 }
