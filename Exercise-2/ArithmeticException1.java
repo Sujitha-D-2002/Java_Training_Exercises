@@ -1,7 +1,17 @@
 import java.util.Scanner;
-
+/**
+ * 
+ * @author sujithadhamotharan
+ *
+ */
 public class ArithmeticException1 {
-
+/**
+ * 
+ * @param args
+ * Here it checks for NumberFormatException if it throws exception then it check for Alphabet Q or q it get exit
+ * if it throws any other Exception it throws Poor input data mesaage
+ * 
+ */
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int flag=0;
@@ -26,6 +36,7 @@ public class ArithmeticException1 {
 					System.out.println(e);
 				}
 		}
+		sc.close();
 		
 	}
 

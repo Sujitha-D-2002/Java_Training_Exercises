@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 class MarkValidationException extends Exception{
+	/*
+	 * In MarkValidationException i have thrown exception while checking if mark is
+	 * entered as greater than 100 without catch block
+	 */
 	public MarkValidationException(String s)
     {
         super(s);
@@ -35,5 +39,6 @@ public class OwnException2 {
 		}
 		OwnExceptionClass own=new OwnExceptionClass();
 		own.validateMark(mark);
+		sc.close();
 	}
 }
