@@ -1,45 +1,62 @@
 import java.util.Scanner;
 
-class Student{
+class Student {
+	/*
+	 * In student class creating name and rollno as instance variable
+	 */
 	String name;
-	int rollno;	 
+	int rollNo;
 }
-class Exam extends Student{
-	int mark1,mark2,mark3;
-	
+
+class Exam extends Student {
+	/*
+	 * In Exam class which extends student Class creating mark1,mark2,mark3 as
+	 * instance variable
+	 */
+	int mark1, mark2, mark3;
+
 }
-class Result extends Exam{
-	int totalmark;
+
+class Result extends Exam {
+	int total;
+
+	/*
+	 * In Result class which extends exam class using the marks (instance variable)
+	 * trying to calculate the result
+	 */
 	public void calculateResult() {
-		totalmark=mark1+mark2+mark3;
-		System.out.println("Total Mark => "+name+" "+totalmark);
+		total = mark1 + mark2 + mark3;
+		System.out.println("Total Mark => " + name + " " + total);
 	}
-	
+
 }
 
 public class Stud {
-
+	/**
+	 * Stud class get the details of student and the mark and passing it ro
+	 * calculateResult class
+	 */
 	public static void main(String[] args) {
-		Result s1 = new Result();
-		Scanner sc = new Scanner(System.in);
-		
+		Result result = new Result();
+		Scanner scanner = new Scanner(System.in);
+
 		System.out.println("Enter the name");
-		s1.name = sc.nextLine();
-		
+		result.name = scanner.nextLine();
+
 		System.out.println("Enter the Roll no");
-		s1.rollno = sc.nextInt();
-		
+		result.rollNo = scanner.nextInt();
+
 		System.out.println("Enter the mark of sub 1");
-		s1.mark1 = sc.nextInt();
-		
+		result.mark1 = scanner.nextInt();
+
 		System.out.println("Enter the mark of sub 2");
-		s1.mark2 = sc.nextInt();
-		
+		result.mark2 = scanner.nextInt();
+
 		System.out.println("Enter the mark of sub 3");
-		s1.mark3 = sc.nextInt();
-		
-		s1.calculateResult();
-		sc.close();
+		result.mark3 = scanner.nextInt();
+
+		result.calculateResult();
+		scanner.close();
 	}
 
 }

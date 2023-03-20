@@ -1,11 +1,14 @@
 public class DefaultValue {
+	/*
+	 * In Defaultvalue class printing thedefault values of primitive datatypes
+	 */
 	static int i;
 	static float f;
 	static boolean bool;
 	static double d;
 	static long l;
 	static char ch;
-	static String str;
+	static String str;//string class- not a primitive datatype
 
 	public static void main(String[] args) {
 		System.out.println("Default value of Integer "+i);

@@ -1,26 +1,31 @@
 public class proof {
 	public static void main(String[] args) {
-		Demo d=new Demo();
-		System.out.println("Before Pass by Value: "+d.size);
+		Demo d = new Demo();
+		System.out.println("Before Pass by Value: " + d.size);
 		new Passing().passValue(d.size);
-		System.out.println("After Pass By Value: "+d.size);
-		
-		System.out.println("Before Pass By Reference: "+d.size);
+		System.out.println("After Pass By Value: " + d.size);
+
+		System.out.println("Before Pass By Reference: " + d.size);
 		new Passing().passReference(d);
-		System.out.println("After Pass By Reference: "+d.size);
+		System.out.println("After Pass By Reference: " + d.size);
 
 	}
 }
-class Demo{
-	Integer size=10;
+
+class Demo {
+	Integer size = 10;
 }
 
-class Passing{
+class Passing {
+	/*
+	 * Passing Class shows the pass by value and pass by reference difference
+	 */
 	public void passValue(int size) {
-		size=20;
-		System.out.println("Within the local scope: "+size);
+		size = 20;
+		System.out.println("Within the local scope: " + size);
 	}
+
 	public void passReference(Demo demo) {
-		demo.size=30;
+		demo.size = 30;
 	}
 }

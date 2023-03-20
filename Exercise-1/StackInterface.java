@@ -1,11 +1,21 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author sujithadhamotharan
+ *
+ */
 interface Stack{
+	/**
+	 * Stack Interface
+	 */
 	public void push(int val);
 	public void pop();
 }
 class FixedClass implements Stack{
+	/**
+	 * Fixed stack Implementation
+	 */
 	int n;
 	int top=-1;
     int[] arr;
@@ -45,6 +55,9 @@ class FixedClass implements Stack{
 	
 }
 class DynamicClass implements Stack{
+	/**
+	 * Dynamic stack implementation
+	 */
 	int n;
 	int top=-1;
     int[] arr;
