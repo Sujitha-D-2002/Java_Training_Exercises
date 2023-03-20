@@ -40,16 +40,16 @@ public class CharacterThread {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		String str = "suji#0madhu74";
-		new Thread(new Runnable() {
+		while (true) {
+			char ch = sc.next().charAt(0);
+			new Thread(new Runnable() {
 
-			@Override
-			public void run() {
-				for (int i = 0; i < str.length(); i++) {
-					CharacterClass.characterClass(str.charAt(i));
+				@Override
+				public void run() {
+					CharacterClass.characterClass(ch);
 				}
-			}
-		}).start();
+			}).start();
+		}
 
 	}
 
