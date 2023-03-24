@@ -1,0 +1,1 @@
+sequenctial input stream file one
