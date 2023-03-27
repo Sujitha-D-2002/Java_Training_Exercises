@@ -1,17 +1,14 @@
-
 import java.io.File;
+
 public class RenameFile {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
+		// Rename File
 		File file = new File("Filenamechange.txt");
-		File rename = new File("Filenameupdated.txt");
-
-		boolean flag = file.renameTo(rename);
-
+		File renamedFile = new File("Filenameupdated.txt");
+		boolean flag = file.renameTo(renamedFile);
 		if (flag == true) {
 			System.out.println("File Successfully Renamed..!!");
-		}
-		else {
+		} else {
 			System.out.println("File is not Renamed");
 		}
 	}

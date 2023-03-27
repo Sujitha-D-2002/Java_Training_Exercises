@@ -5,20 +5,16 @@ import java.io.IOException;
 public class CopyLine {
 
 	public static void main(String[] args) {
-		BufferedReader reader;
-		/**
-		 * Trying to print line by line from the file using bufferreader
-		 */
+		BufferedReader bufferedReader;
+		// Print line by line from the file using BufferReader
 		try {
-			reader = new BufferedReader(new FileReader("sample.txt"));
-			String line = reader.readLine();
-
+			bufferedReader = new BufferedReader(new FileReader("sample.txt"));
+			String line = bufferedReader.readLine();
 			while (line != null) {
 				System.out.println(line);
-				line = reader.readLine();
+				line = bufferedReader.readLine();
 			}
-
-			reader.close();
+			bufferedReader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

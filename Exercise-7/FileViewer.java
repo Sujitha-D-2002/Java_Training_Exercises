@@ -4,18 +4,15 @@ import java.io.FileInputStream;
 public class FileViewer {
 	public static void main(String args[]) {
 		try {
-			FileInputStream file = new FileInputStream("file1.txt");
-			BufferedInputStream buffer = new BufferedInputStream(file);
+			FileInputStream fileInputStream = new FileInputStream("file1.txt");
+			BufferedInputStream bufferInputStream = new BufferedInputStream(fileInputStream );
 			int i;
-			/**
-			 * Here trying to read the content of file1.text using buffered input stream and
-			 * printing the content
-			 */
-			while ((i = buffer.read()) != -1) {
+			// Read the content of file using bufferedInputStream and printing the content
+			while ((i = bufferInputStream.read()) != -1) {
 				System.out.print((char) i);
 			}
-			buffer.close();
-			file.close();
+			bufferInputStream.close();
+			fileInputStream .close();
 		} catch (Exception e) {
 			System.out.println(e);
 		}

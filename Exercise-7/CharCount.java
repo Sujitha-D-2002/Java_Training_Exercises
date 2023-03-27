@@ -1,20 +1,23 @@
 import java.util.Scanner;
 
 public class CharCount {
-	/**
-	 * Printing the count of character given
-	 */
+	 //Count of character given
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int count = 0;
-		while (true) {
-			char ch = sc.next().charAt(0);
-			if (sc.next() == null)
-				break;
+		boolean flag=true;
+		System.out.println("Enter the character");
+		while (flag) {
+			char ch = scanner.next().charAt(0);
+			if (!Character.isAlphabetic(ch)) {
+				flag=false;
+				count--;
+			}
 			count++;
 		}
-		System.out.println(count);
-		sc.close();
+		System.out.println("Count of Character: "+count);
+		scanner.close();
 	}
 
 }
