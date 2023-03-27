@@ -2,9 +2,8 @@ import java.sql.*;
 
 public class TransactionPairs {
 	public static void main(String args[]) throws SQLException, ClassNotFoundException {
-		/**
-		 * Trying to connect with ace database
-		 */
+
+		// Connect with ace database
 		String url = "jdbc:mysql://localhost/ace";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/ace", "root", "Sujitha@2002");
@@ -13,10 +12,6 @@ public class TransactionPairs {
 		PreparedStatement updateTotal;
 		System.out.println(con);
 
-		/**
-		 * In ace database having coffees table in that we have some inserted values in
-		 * that trying to update and displaying the values of coffees table
-		 */
 		String updateString = "update COFFEES " + "set SALES = ? where COF_NAME like ?";
 		String updateStatement = "update COFFEES " + "set TOTAL = TOTAL + ? where COF_NAME like ?";
 		String query = "select COF_NAME, SALES, TOTAL from COFFEES";
@@ -28,9 +23,7 @@ public class TransactionPairs {
 		}
 
 		try {
-			/**
-			 * Trying to set values for sales and total in coffees table
-			 */
+			// Set values for sales and total in coffees table
 			con = DriverManager.getConnection(url, "root", "Sujitha@2002");
 			updateSales = con.prepareStatement(updateString);
 			updateTotal = con.prepareStatement(updateStatement);
