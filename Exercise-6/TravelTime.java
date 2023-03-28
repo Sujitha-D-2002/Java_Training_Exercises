@@ -44,8 +44,8 @@ public class TravelTime {
 	 * isHoliday() method checks wheather the travelling date have any holidays
 	 */
 	static boolean isHoliday(LocalDate date) {
-		if (date.getDayOfWeek().getValue() == 7 || date.getDayOfYear() == 1 || date.getDayOfYear() == 15
-				|| date.getDayOfYear() == 197 || date.getDayOfYear() == 361) {
+		if (date.getDayOfWeek().getValue() == 7 ||(date.getMonth().getValue() == 1 && date.getDayOfMonth()==1) || (date.getMonth().getValue() == 15 && date.getDayOfMonth()==8)
+				||(date.getMonth().getValue() == 1 && date.getDayOfMonth()==26)) {
 			return true;
 		}
 		Locale locale = Locale.ROOT;
@@ -74,7 +74,7 @@ public class TravelTime {
 		} else {
 			month = Integer.parseInt(datesplit[1]);
 		}
-		if (!(datesplit[2].length() == 4 && Integer.parseInt(datesplit[2]) <= 2023)) {
+		if (!(datesplit[2].length() == 4)) {
 			System.out.println("Invalid Year..!!");
 			flag = false;
 		} else {
