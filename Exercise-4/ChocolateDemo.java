@@ -2,21 +2,36 @@ import java.util.Scanner;
 /*
  * Factory Pattern
  */
+
+class UnavailableChocolateException extends Exception {
+	/*
+	 * In UnavailableChocolateException thrown exception when the user enters the
+	 * unavailable chocolate in the factory.
+	 */
+	public UnavailableChocolateException(String s) {
+		super(s);
+	}
+}
+
 class ChocolateFactory {
 	/**
 	 * 
 	 * Here the chocolate get created for the consumer need
 	 */
 	public Chocolate createChocolate(String choco) {
-		Chocolate chocolate;
-		if (choco.equalsIgnoreCase("diarymilk")) {
-			chocolate = new DiaryMilk();
-		} else if (choco.equalsIgnoreCase("kitkat")) {
-			chocolate = new KitKat();
-		} else if (choco.equalsIgnoreCase("milkybar")) {
-			chocolate = new MilkyBar();
-		} else {
-			chocolate = null;
+		Chocolate chocolate = null;
+		try {
+			if (choco.equalsIgnoreCase("diarymilk")) {
+				chocolate = new DiaryMilk();
+			} else if (choco.equalsIgnoreCase("kitkat")) {
+				chocolate = new KitKat();
+			} else if (choco.equalsIgnoreCase("milkybar")) {
+				chocolate = new MilkyBar();
+			} else {
+				throw new UnavailableChocolateException("Customer need chocolate is unavailable..");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 		return chocolate;
 	}
@@ -81,8 +96,9 @@ class ChocolateDemo {
 		System.out.println("What chocolate you need....?");
 		Scanner sc = new Scanner(System.in);
 		String chocolate = sc.next();
-		System.out.println(cshop.orderChocolate(chocolate));
-		cshop.orderChocolate(chocolate).createChocolate();
+		if (cshop.orderChocolate(chocolate) != null) {
+			cshop.orderChocolate(chocolate).createChocolate();
+		}
 
 		sc.close();
 	}
